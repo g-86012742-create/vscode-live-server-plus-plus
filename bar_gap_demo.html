@@ -2,58 +2,52 @@
 <html lang="ms">
 <head>
   <meta charset="UTF-8">
-  <title>Unjuran Jadual Waktu 2025</title>
+  <title>Unjuran Jadual Waktu 2026</title>
   <style>
     body { font-family: Arial, sans-serif; margin:20px; }
     table { border-collapse: collapse; width: 100%; margin-top: 20px; }
     th, td { border: 1px solid #333; padding: 8px; text-align: center; }
     th { background: #f4f4f4; }
-    /* Gaya tambahan untuk jadual Subjek Utama */
     .header-utama { background:#f59e0b; color:#fff; font-weight:bold; }
     .subhead-utama { background:#ffedd5; font-weight:bold; }
     .bord-utama th, .bord-utama td { border:2px solid #f59e0b; }
     .wrapper-scroll { max-height: 520px; overflow: auto; border:2px solid #f59e0b; border-radius:6px; }
     .wrapper-scroll thead th { position: sticky; top: 0; z-index: 2; }
     .tingkatan-row td { background:#fde68a; font-weight:bold; text-align:left; }
-    /* Kawalan ringkas */
     .btn { padding:6px 10px; border:1px solid #333; background:#f4f4f4; cursor:pointer; border-radius:4px; }
     .btn:hover { background:#e9e9e9; }
     .table-simple { border-collapse: collapse; width:100%; margin-top:10px; }
     .table-simple th, .table-simple td { border:1px solid #333; padding:6px; text-align:center; }
     .table-simple th { background:#fafafa; }
     .input-sm { padding:6px; width:100%; box-sizing:border-box; }
-  .wrapper-scroll-sm { max-height: 360px; overflow: auto; border:2px solid #f59e0b; border-radius:6px; }
-  .wrapper-scroll-sm thead th { position: sticky; top: 0; z-index: 2; background:#fafafa; }
-  /* SING kolum lebih padat */
-  .col-sing { white-space: nowrap; width:1%; }
-  .in-sing { width: 110px; box-sizing: border-box; }
-  /* Inputs untuk senarai subjek */
-  .in-subj-name, .in-subj-sing { width: 100%; box-sizing: border-box; padding:6px; }
-    /* SUBJEK kolum kecil */
+    .wrapper-scroll-sm { max-height: 360px; overflow: auto; border:2px solid #f59e0b; border-radius:6px; }
+    .wrapper-scroll-sm thead th { position: sticky; top: 0; z-index: 2; background:#fafafa; }
+    .col-sing { white-space: nowrap; width:1%; }
+    .in-sing { width: 110px; box-sizing: border-box; }
+    .in-subj-name, .in-subj-sing { width: 100%; box-sizing: border-box; padding:6px; }
     .col-sub { white-space: nowrap; width:1%; }
     .in-sub { width: 70px; box-sizing: border-box; }
-  .in-subj-name, .in-subj-sing { width: 100%; box-sizing: border-box; padding:6px; }
-
-  /* Susun sebelah-menyebelah: Guru & Subjek */
-  .row-forms { display:flex; gap:16px; align-items:flex-start; flex-wrap:wrap; }
-  .row-forms .col { flex:1 1 420px; min-width:360px; }
-  .card { padding:8px; border-radius:8px; border:2px solid #ddd; }
-
-  /* Tema warna untuk jadual kecil */
-  .table-colored tbody tr:nth-child(even) { background:#f8fafc; }
-  .table-guru th { background:#2563eb; color:#fff; }
-  .table-subjek th { background:#059669; color:#fff; }
-  .table-guru th, .table-guru td { border-color:#1e40af; }
-  .table-subjek th, .table-subjek td { border-color:#065f46; }
-  .wrapper-scroll-sm.theme-guru { border-color:#2563eb; }
-  .wrapper-scroll-sm.theme-subjek { border-color:#059669; }
-  .wrapper-scroll-sm.theme-guru thead th { background:#2563eb; color:#fff; }
-  .wrapper-scroll-sm.theme-subjek thead th { background:#059669; color:#fff; }
-
-  /* Header utama aplikasi */
-  .app-header { position: sticky; top: 0; z-index: 10; background: linear-gradient(90deg,#1e3a8a,#1d4ed8); color:#fff; padding:14px 16px; border-radius:8px; box-shadow: 0 4px 10px rgba(0,0,0,0.08); }
-  .app-header h1 { margin:0; font-size:22px; letter-spacing:0.3px; }
-  .app-header p { margin:2px 0 0 0; opacity:0.95; }
+    .row-forms { display:flex; gap:16px; align-items:flex-start; flex-wrap:wrap; }
+    .row-forms .col { flex:1 1 420px; min-width:360px; }
+    .card { padding:8px; border-radius:8px; border:2px solid #ddd; }
+    .table-colored tbody tr:nth-child(even) { background:#f8fafc; }
+    .table-guru th { background:#2563eb; color:#fff; }
+    .table-subjek th { background:#059669; color:#fff; }
+    .table-guru th, .table-guru td { border-color:#1e40af; }
+    .table-subjek th, .table-subjek td { border-color:#065f46; }
+    .wrapper-scroll-sm.theme-guru { border-color:#2563eb; }
+    .wrapper-scroll-sm.theme-subjek { border-color:#059669; }
+    .wrapper-scroll-sm.theme-guru thead th { background:#2563eb; color:#fff; }
+    .wrapper-scroll-sm.theme-subjek thead th { background:#059669; color:#fff; }
+    .app-header { position: sticky; top: 0; z-index: 10; background: linear-gradient(90deg,#1e3a8a,#1d4ed8); color:#fff; padding:14px 16px; border-radius:8px; box-shadow: 0 4px 10px rgba(0,0,0,0.08); }
+    .app-header h1 { margin:0; font-size:22px; letter-spacing:0.3px; }
+    .app-header p { margin:2px 0 0 0; opacity:0.95; }
+    /* status bar */
+    #status { margin:10px 0; padding:8px 10px; border-radius:6px; display:none; }
+    #status.ok { background:#ecfdf5; border:1px solid #10b981; color:#065f46; display:block; }
+    #status.warn { background:#fff7ed; border:1px solid #fb923c; color:#7c2d12; display:block; }
+    #status.err { background:#fef2f2; border:1px solid #ef4444; color:#7f1d1d; display:block; }
+    #status small { opacity:.85 }
   </style>
 </head>
 <body>
@@ -61,41 +55,50 @@
     <h1 id="mainHeaderTitle">Unjuran Jadual Waktu 2026</h1>
     <p id="mainHeaderSub">SMK Dato' Usman Awang</p>
   </div>
+
+  <div id="status"></div>
+
+  <div style="margin:10px 0;">
+    <button type="button" class="btn" onclick="resetLocalData()">Reset Data Tempatan</button>
+    <button type="button" class="btn" onclick="syncToServer()">Sync ke Google Sheets</button>
+    <button type="button" class="btn" onclick="fetchFromServer()">Refresh dari Google Sheets</button>
+  </div>
+
   <div class="row-forms">
-    <!-- Kolum: Pengisian Nama Guru -->
     <div class="col card">
       <h2>Pengisian Nama Guru</h2>
       <div>
         <input type="text" id="guruNama" placeholder="Nama penuh (cth: JASLEY A/P ...)" style="text-transform:uppercase; width:48%" />
         <input type="text" id="guruSing" placeholder="Singkatan (cth: JASLEY)" style="text-transform:uppercase; width:25%" />
-        <button class="btn" onclick="addTeacher()">Tambah Guru</button>
+        <button type="button" class="btn" onclick="addTeacher()">Tambah Guru</button>
       </div>
       <div class="wrapper-scroll-sm theme-guru" style="margin-top:8px;">
         <table id="tblGuru" class="table-simple table-colored table-guru"></table>
       </div>
-      <!-- Import Pukal Guru -->
       <div style="margin-top:10px;">
         <details>
           <summary style="cursor:pointer">Import Pukal Guru</summary>
           <div style="margin-top:6px; display:flex; gap:8px; flex-wrap:wrap; align-items:flex-start;">
-            <textarea id="bulkGuruText" placeholder="Satu baris satu guru. Format sokongan:\n- Nama penuh sahaja\n- Nama penuh, SING\n- SING - Nama penuh" style="width:100%; max-width:560px; height:120px; text-transform:uppercase"></textarea>
+            <textarea id="bulkGuruText" placeholder="Satu baris satu guru. Format sokongan:
+- Nama penuh sahaja
+- Nama penuh, SING
+- SING - Nama penuh" style="width:100%; max-width:560px; height:120px; text-transform:uppercase"></textarea>
             <div style="display:flex; gap:8px; align-items:center; flex-wrap:wrap;">
-              <button class="btn" onclick="importGuruBulk()">Import</button>
-              <button class="btn" onclick="exportGuruCSV()">Eksport CSV</button>
+              <button type="button" class="btn" onclick="importGuruBulk()">Import</button>
+              <button type="button" class="btn" onclick="exportGuruCSV()">Eksport CSV</button>
             </div>
-            <small>Contoh baris: "AHMAD BIN ALI, AHMAD" atau "AHMAD - AHMAD" atau hanya "AHMAD BIN ALI"</small>
+            <small>Contoh: "AHMAD BIN ALI, AHMAD" atau "AHMAD - AHMAD" atau hanya "AHMAD BIN ALI"</small>
           </div>
         </details>
       </div>
     </div>
 
-    <!-- Kolum: Senarai Subjek & Singkatan -->
     <div class="col card">
       <h2>Senarai Subjek & Singkatan</h2>
       <div>
         <input type="text" id="subjNama" placeholder="Nama subjek penuh" style="text-transform:uppercase; width:40%" />
         <input type="text" id="subjSing" placeholder="Singkatan" style="text-transform:uppercase; width:25%" />
-        <button class="btn" onclick="addSubject()">Tambah Subjek</button>
+        <button type="button" class="btn" onclick="addSubject()">Tambah Subjek</button>
       </div>
       <div class="wrapper-scroll-sm theme-subjek" style="margin-top:8px;">
         <table id="tblSubjects" class="table-simple table-colored table-subjek"></table>
@@ -103,752 +106,437 @@
     </div>
   </div>
 
-  
-
   <h2>Jadual Subjek Utama</h2>
   <div class="wrapper-scroll">
     <table id="jadualSubjekUtama" class="bord-utama"></table>
   </div>
 
-  
-
   <h2>Rumusan Mengikut Guru</h2>
   <div id="output"></div>
 
-  <h2>Google Sheets (Opsyen)</h2>
-  <div style="display:flex; gap:10px; align-items:center; flex-wrap:wrap">
-  <input type="url" id="gasUrl" placeholder="Web App URL (Google Apps Script)" style="width:58%" value="https://script.google.com/macros/s/AKfycbzegR_6Gv1KKYXAymvKNmWJMJumVNCCzARtzuB3sx5PhM1drWKT4m1J6Sz1iAxnUnK1/exec" />
-    <input type="password" id="gasSecret" placeholder="Rahsia (jika digunakan)" style="width:25%" />
-    <button class="btn" id="btnPushSheets">Hantar ke Google Sheets</button>
-    <button class="btn" id="btnPullSheets">Segarkan dari Google Sheet</button>
-    <button class="btn" id="btnTestConn">Uji sambungan</button>
-    <button class="btn" id="btnResetLocal" title="Padam data tempatan (guru, subjek, jadual)">Reset Data</button>
-    <span id="syncStatus" style="margin-left:6px; color:#555"></span>
-  </div>
-  <div style="margin-top:6px; display:flex; gap:8px; align-items:center">
-    <label style="display:flex; gap:6px; align-items:center">
-      <input type="checkbox" id="autoRefreshOnLoad" /> Auto segar semula semasa buka
-    </label>
-  </div>
+<script>
+  // === TETAPKAN WEB APP GAS URL DI SINI ===
+  const API_URL = "PASTE_GOOGLE_APPS_SCRIPT_WEBAPP_URL_HERE"; // mesti /exec
 
-  <script>
-    let data = [];
+  // util: panel status
+  function notify(msg, type='ok'){
+    const el = document.getElementById('status');
+    if(!el) return;
+    el.className = ''; el.textContent = '';
+    el.classList.add(type==='ok'?'ok':type==='warn'?'warn':'err');
+    el.innerHTML = msg;
+  }
 
-    // Senarai asas untuk bina jadual seperti contoh
-  const CLASS_CODES = ["BER","NIL","ZAM","RAF","HIB","LAV","DAH","AKA","TUL","ORK","IXO"]; // Kelas tanpa nombor
-  const PERALIHAN_CODES = ["P1","P2"]; // Kelas khas untuk Peralihan
-    const TINGKATAN_ORDER = [5,4,3,2,1,"PERALIHAN"]; // Urutan diminta
-    // Senarai guru akan diisi dari Google Sheets; dikosongkan sebagai fallback
-    const TEACHERS = [];
-    const SUBJECTS = ["BI","BM","MATEMATIK","SAINS","SEJARAH"]; // BI sebagai default
-    // Senarai subjek juga diisi dari Google Sheets; dikosongkan sebagai fallback
-    let SUBJECTS_ALL = [];
+  let data = [];
+  const TEACHERS = [];
+  let SUBJECTS_ALL = [];
 
-    // ========== PERSISTENSI (localStorage) ==========
-    const LS_TEACHERS_KEY = 'rumusan_guru_teachers_v1';
-    const LS_DATA_KEY = 'rumusan_guru_data_v1';
-  const LS_CSV_URL_KEY = 'rumusan_guru_csv_url_v1';
-  const LS_CSV_AUTO_KEY = 'rumusan_guru_csv_auto_v1';
-  const LS_LAST_IMPORT_KEY = 'rumusan_guru_last_import_v1';
+  const CLASS_CODES = ["BER","NIL","ZAM","RAF","HIB","LAV","DAH","AKA","TUL","ORK","IXO"];
+  const PERALIHAN_CODES = ["P1","P2"];
+  const TINGKATAN_ORDER = [5,4,3,2,1,"PERALIHAN"];
+  const SUBJECTS_DEFAULT = ["BI","BM","MATEMATIK","SAINS","SEJARAH"];
+
+  const LS_TEACHERS_KEY = 'rumusan_guru_teachers_v1';
+  const LS_DATA_KEY     = 'rumusan_guru_data_v1';
   const LS_SUBJECTS_KEY = 'rumusan_guru_subjects_v1';
-  const LS_GAS_URL_KEY = 'rumusan_guru_gas_url_v1';
-  const LS_GAS_SECRET_KEY = 'rumusan_guru_gas_secret_v1';
-  const LS_AUTO_REFRESH_KEY = 'rumusan_guru_auto_refresh_v1';
-  let autosyncTimer = null;
 
-    function saveState(){
-      try {
-        localStorage.setItem(LS_TEACHERS_KEY, JSON.stringify(TEACHERS));
-        localStorage.setItem(LS_DATA_KEY, JSON.stringify(data));
-        // Simpan senarai subjek
-        try {
-          const subjOut = (Array.isArray(SUBJECTS_ALL) ? SUBJECTS_ALL : []).map(s=>({
-            name: (s.name||'').toUpperCase(),
-            sing: (s.sing||'').toUpperCase()
-          }));
-          localStorage.setItem(LS_SUBJECTS_KEY, JSON.stringify(subjOut));
-        } catch(e) {}
-      } catch(e) { console.warn('Gagal simpan ke localStorage:', e); }
-      // Auto-sync (debounce) jika URL GAS ada
-      try { scheduleAutoSync(); } catch(e) {}
+  // ========== LocalStorage ==========
+  function saveState(){
+    try{
+      localStorage.setItem(LS_TEACHERS_KEY, JSON.stringify(TEACHERS));
+      localStorage.setItem(LS_DATA_KEY, JSON.stringify(data));
+      localStorage.setItem(LS_SUBJECTS_KEY, JSON.stringify(SUBJECTS_ALL));
+    }catch(e){ console.warn(e); }
+  }
+  function loadState(){
+    try{
+      const t=JSON.parse(localStorage.getItem(LS_TEACHERS_KEY)||"[]");
+      const d=JSON.parse(localStorage.getItem(LS_DATA_KEY)||"[]");
+      const s=JSON.parse(localStorage.getItem(LS_SUBJECTS_KEY)||"[]");
+      TEACHERS.length=0; t.forEach(x=>TEACHERS.push(x));
+      data.length=0; d.forEach(x=>data.push(x));
+      SUBJECTS_ALL.length=0; s.forEach(x=>SUBJECTS_ALL.push(x));
+    }catch(e){ console.warn(e); }
+  }
+  function resetLocalData(){
+    if(!confirm('Padam semua data tempatan (guru, subjek, jadual)?')) return;
+    localStorage.removeItem(LS_TEACHERS_KEY);
+    localStorage.removeItem(LS_DATA_KEY);
+    localStorage.removeItem(LS_SUBJECTS_KEY);
+    TEACHERS.length = 0; SUBJECTS_ALL.length = 0; data.length = 0;
+    renderTeacherTable(); renderSubjects(); buildJadual(); paparRumusan();
+    notify('Data tempatan dipadam.', 'warn');
+  }
+
+  // ========== Server Sync (GAS) ==========
+  async function safeParseJSON(res){
+    const text = await res.text();
+    try { return { ok:true, json: JSON.parse(text) }; }
+    catch { return { ok:false, text }; }
+  }
+
+  async function fetchFromServer(){
+    if(!API_URL || API_URL.startsWith('PASTE_')){
+      notify('API_URL belum ditetapkan. Tetapkan URL Web App GAS yang berakhir dengan <code>/exec</code>.', 'warn');
+      return;
     }
-
-    function loadState(){
-      try {
-        const tStr = localStorage.getItem(LS_TEACHERS_KEY);
-        if(tStr){
-          const arr = JSON.parse(tStr);
-          if(Array.isArray(arr)){
-            TEACHERS.length = 0;
-            arr.forEach(x=>{
-              if(x && typeof x === 'object'){
-                const name = (x.name||'').toUpperCase();
-                const sing = (x.sing||x.name||'').toUpperCase();
-                TEACHERS.push({ name, sing });
-              }
-            });
-          }
-        }
-        const dStr = localStorage.getItem(LS_DATA_KEY);
-        if(dStr){
-          const arr = JSON.parse(dStr);
-          if(Array.isArray(arr)) data = arr;
-        }
-        // Muat senarai subjek jika ada
-        const sStr = localStorage.getItem(LS_SUBJECTS_KEY);
-        if(sStr){
-          try{
-            const arr = JSON.parse(sStr);
-            if(Array.isArray(arr)){
-              SUBJECTS_ALL = arr.map(x=>({
-                name: (x.name||'').toUpperCase(),
-                sing: (x.sing||'').toUpperCase()
-              }));
-            }
-          }catch(e){}
-        }
-        const urlStr = localStorage.getItem(LS_CSV_URL_KEY);
-        if(urlStr){
-          const urlInput = document.getElementById('csvUrl');
-          if(urlInput) urlInput.value = urlStr;
-        }
-        // Muat config GAS jika UI wujud
-        const gasUrlEl = document.getElementById('gasUrl');
-        if(gasUrlEl){ gasUrlEl.value = localStorage.getItem(LS_GAS_URL_KEY) || ''; }
-        const gasSecEl = document.getElementById('gasSecret');
-        if(gasSecEl){ gasSecEl.value = localStorage.getItem(LS_GAS_SECRET_KEY) || ''; }
-      } catch(e) { console.warn('Gagal muat dari localStorage:', e); }
-    }
-
-    function scheduleAutoSync(){
-      const url = (document.getElementById('gasUrl')?.value || localStorage.getItem(LS_GAS_URL_KEY) || '').trim();
-      if(!url) return;
-      if(autosyncTimer) clearTimeout(autosyncTimer);
-      autosyncTimer = setTimeout(()=>{ syncToSheets(true).catch(()=>{}); }, 1000);
-    }
-
-    function saveCSVUrl(){
-      try{
-        const urlInput = document.getElementById('csvUrl');
-        const val = (urlInput?.value||'').trim();
-        localStorage.setItem(LS_CSV_URL_KEY, val);
-        alert('Link disimpan.');
-      } catch(e){ console.warn('Gagal simpan link:', e); }
-    }
-
-    function setImportStatus(text){
-      try{ localStorage.setItem(LS_LAST_IMPORT_KEY, text); }catch(e){}
-    }
-
-    // ========== SENARAI SUBJEK & SINGKATAN ==========
-    function renderSubjects(){
-      const tbl = document.getElementById('tblSubjects');
-      if(!tbl) return;
-      let html = '<thead><tr><th>#</th><th>NAMA SUBJEK</th><th class="col-sing">SING</th><th>TINDAKAN</th></tr></thead><tbody>';
-      if(!Array.isArray(SUBJECTS_ALL) || SUBJECTS_ALL.length===0){
-        html += '<tr><td colspan="4">— Tiada subjek —</td></tr>';
+    try{
+      const res = await fetch(API_URL, { method:'GET', mode:'cors', credentials:'omit' });
+      const parsed = await safeParseJSON(res);
+      if(!res.ok){ notify(`Ralat HTTP ${res.status}. ${parsed.text||''}`, 'err'); return; }
+      if(!parsed.ok){ notify('Server balas bukan JSON. Pratonton:<br><small>'+escapeHtml(parsed.text.slice(0,400))+'…</small>', 'err'); return; }
+      const json = parsed.json;
+      if(json.success){
+        TEACHERS.length=0; (json.teachers||[]).forEach(t=>TEACHERS.push({ name:String(t.name||'').toUpperCase(), sing:String(t.sing||t.name||'').toUpperCase() }));
+        SUBJECTS_ALL.length=0; (json.subjects||[]).forEach(s=>SUBJECTS_ALL.push({ name:String(s.name||'').toUpperCase(), sing:String(s.sing||s.name||'').toUpperCase() }));
+        data.length=0; (json.jadual||[]).forEach(j=>data.push({
+          tingkatan: (j.tingkatan===undefined||j.tingkatan===null)? '' : j.tingkatan,
+          kelas: String(j.kelas||'').toUpperCase(),
+          masa: Number(j.masa||0),
+          subjek: String(j.subjek||'').toUpperCase(),
+          guru: String(j.guru||'').toUpperCase(),
+          confirmed: !!j.confirmed
+        }));
+        saveState(); renderTeacherTable(); renderSubjects(); buildJadual(); paparRumusan();
+        notify('Data berjaya dimuat dari Google Sheets.', 'ok');
       } else {
-        SUBJECTS_ALL.forEach((s,i)=>{
-          const nm = (s.name||'').toUpperCase();
-          const sg = (s.sing||'').toUpperCase();
-          html += `<tr>
-            <td>${i+1}</td>
-            <td><input class="in-subj-name" data-idx="${i}" value="${nm}" style="text-transform:uppercase" /></td>
-            <td class="col-sing"><input class="in-subj-sing" data-idx="${i}" value="${sg}" style="text-transform:uppercase; width:110px" /></td>
-            <td><button class="btn" onclick="removeSubject(${i})">Padam</button></td>
-          </tr>`;
-        });
+        notify('Gagal ambil data: '+escapeHtml(json.error||'Tidak diketahui'), 'err');
       }
-      html += '</tbody>';
-      tbl.innerHTML = html;
-      // Bind perubahan
-      tbl.querySelectorAll('.in-subj-name').forEach(inp=>{
-        inp.addEventListener('change', ()=>{
-          const i = parseInt(inp.dataset.idx,10);
-          if(!Number.isFinite(i) || i<0 || i>=SUBJECTS_ALL.length) return;
-          SUBJECTS_ALL[i].name = (inp.value||'').trim().toUpperCase();
-          saveState();
-          buildJadual(); // update dropdown if name changed
-        });
-      });
-      tbl.querySelectorAll('.in-subj-sing').forEach(inp=>{
-        inp.addEventListener('change', ()=>{
-          const i = parseInt(inp.dataset.idx,10);
-          if(!Number.isFinite(i) || i<0 || i>=SUBJECTS_ALL.length) return;
-          SUBJECTS_ALL[i].sing = (inp.value||'').trim().toUpperCase();
-          saveState();
-          buildJadual(); // update dropdown if sing changed
-        });
-      });
+    }catch(e){
+      console.error(e);
+      notify('Ralat sambungan ke server: '+escapeHtml(String(e)), 'err');
     }
+  }
 
-    function ensureRow(tingkatan, kelas, defaults){
-      let rec = data.find(d => d.kelas === kelas && d.tingkatan === tingkatan);
-      if(!rec){
-        rec = { tingkatan, kelas, masa: defaults?.masa ?? 5, subjek: defaults?.subjek ?? "BI", guru: defaults?.guru ?? "", confirmed: false };
-        data.push(rec);
-      }
-      if(typeof rec.confirmed !== 'boolean') rec.confirmed = false;
-      return rec;
+  async function syncToServer(){
+    if(!API_URL || API_URL.startsWith('PASTE_')){
+      notify('Sila tetapkan API_URL (Web App GAS) dahulu.', 'warn');
+      return;
     }
-
-    function buildJadual(){
-      const tbl = document.getElementById("jadualSubjekUtama");
-      if(!tbl) return;
-
-      // Header
-      let html = `<thead>
-        <tr><th colspan="5" class="header-utama">SUBJEK UTAMA</th></tr>
-        <tr class="subhead-utama">
-          <th>CLASS</th>
-          <th>BIL WAK</th>
-          <th>NAMA SUBJEK</th>
-          <th>NAMA GURU</th>
-          <th>TINDAKAN</th>
-        </tr>
-      </thead><tbody>`;
-
-      TINGKATAN_ORDER.forEach(ting => {
-  html += `<tr class="tingkatan-row"><td colspan="5">TINGKATAN ${ting}</td></tr>`;
-        const classesForTing = (ting === 'PERALIHAN') ? PERALIHAN_CODES : CLASS_CODES;
-        classesForTing.forEach(code => {
-          const kelas = code; // guna P1,P2 untuk Peralihan; selain itu guna senarai kelas asas
-          const rec = ensureRow(ting, kelas, { masa:5, subjek:"BI", guru:"" });
-
-          const masaOpts = Array.from({length:10}, (_,i)=>i+1)
-            .map(v => `<option value="${v}" ${v===rec.masa ? "selected" : ""}>${v}</option>`).join("");
-          // Bina pilihan subjek: ada placeholder, dan kekalkan pilihan lama jika tiada dalam senarai
-          let foundSub = false;
-          let subjekOpts = `<option value=""></option>` + SUBJECTS_ALL.map(s => {
-            const sel = (s.sing === rec.subjek);
-            if(sel) foundSub = true;
-            return `<option value="${s.sing}" ${sel ? 'selected' : ''}>${s.name}</option>`;
-          }).join("");
-          if(rec.subjek && !foundSub){
-            subjekOpts = `<option value="${rec.subjek}" selected>(${rec.subjek})</option>` + subjekOpts;
-          }
-          // Bina pilihan guru: label guna singkatan, value guna nama penuh
-          const namesSet = new Set(TEACHERS.map(x=>x.name));
-          let guruOpts = `<option value=""></option>`;
-          guruOpts += TEACHERS.map(t => {
-            const val = t.name;
-            const label = t.sing || t.name;
-            const sel = (val === rec.guru) ? 'selected' : '';
-            return `<option value="${val}" ${sel}>${label}</option>`;
-          }).join("");
-          // Kekalkan nilai lama jika tidak dalam senarai
-          if(rec.guru && !namesSet.has(rec.guru)){
-            guruOpts = `<option value="${rec.guru}" selected>${rec.guru}</option>` + guruOpts;
-          }
-
-          const disabled = rec.confirmed ? 'disabled' : '';
-          html += `<tr>
-            <td>${kelas}</td>
-            <td><select class="inp-masa" data-ting="${ting}" data-kelas="${kelas}">${masaOpts}</select></td>
-            <td><select class="inp-subjek" data-ting="${ting}" data-kelas="${kelas}">${subjekOpts}</select></td>
-            <td><select class="inp-guru" data-ting="${ting}" data-kelas="${kelas}">${guruOpts}</select></td>
-            <td><button class="btn btn-teruskan" data-ting="${ting}" data-kelas="${kelas}" ${disabled}>Teruskan</button></td>
-          </tr>`;
-        });
+    try{
+      const payload = { action:"write", teachers:TEACHERS, subjects:SUBJECTS_ALL, jadual:data };
+      const res = await fetch(API_URL, {
+        method:"POST",
+        mode:'cors',
+        credentials:'omit',
+        headers:{ "Content-Type":"application/json" },
+        body: JSON.stringify(payload)
       });
-
-      html += `</tbody>`;
-      tbl.innerHTML = html;
-
-      // Set nilai kepada data jika berubah
-      tbl.querySelectorAll('.inp-masa').forEach(sel => {
-        sel.addEventListener('change', e => {
-          const kelas = sel.dataset.kelas; const ting = sel.dataset.ting;
-          const rec = ensureRow(ting, kelas);
-          rec.masa = parseInt(sel.value,10) || 0;
-          rec.confirmed = false; // perubahan membatalkan pengesahan
-          paparRumusan();
-          saveState();
-        });
-      });
-      tbl.querySelectorAll('.inp-subjek').forEach(sel => {
-        sel.addEventListener('change', e => {
-          const kelas = sel.dataset.kelas; const ting = sel.dataset.ting;
-          const rec = ensureRow(ting, kelas);
-          rec.subjek = sel.value;
-          rec.confirmed = false;
-          paparRumusan();
-          saveState();
-        });
-      });
-      tbl.querySelectorAll('.inp-guru').forEach(sel => {
-        sel.addEventListener('change', e => {
-          const kelas = sel.dataset.kelas; const ting = sel.dataset.ting;
-          const rec = ensureRow(ting, kelas);
-          rec.guru = (sel.value || '').toUpperCase();
-          rec.confirmed = false;
-          paparRumusan();
-          saveState();
-        });
-      });
-      // Butang TERUSKAN untuk sahkan baris ke rumusan
-      tbl.querySelectorAll('.btn-teruskan').forEach(btn => {
-        btn.addEventListener('click', () => {
-          const ting = btn.dataset.ting; const kelas = btn.dataset.kelas;
-          const rec = ensureRow(ting, kelas);
-          if(rec.confirmed){
-            alert('Data telah diisi.');
-            return;
-          }
-          // Validasi perlu lengkap
-          if(!rec.subjek || !rec.masa || !rec.kelas || !rec.tingkatan){
-            alert('Sila lengkapkan Subjek, Bil Waktu, Kelas dan Tingkatan.');
-            return;
-          }
-          if(!rec.guru){
-            alert('Sila pilih Nama Guru.');
-            return;
-          }
-          // Semak pendua: (tingkatan, kelas, subjek, masa) dalam rekod yang telah disahkan
-          const isDup = data.some(d => d !== rec && d.confirmed && d.tingkatan===rec.tingkatan && d.kelas===rec.kelas && d.subjek===rec.subjek && d.masa===rec.masa);
-          if(isDup){
-            alert('Peringatan: Data telah diisi untuk kombinasi ini.');
-            return;
-          }
-          rec.confirmed = true;
-          saveState();
-          buildJadual(); // kemaskini butang (disable)
-          paparRumusan();
-        });
-      });
-    }
-
-    // ========== PENGISIAN NAMA GURU ==========
-    function renderTeacherTable(){
-      const tbl = document.getElementById('tblGuru');
-      if(!tbl) return;
-  let html = '<thead><tr><th>BIL</th><th>NAMA</th><th class="col-sing">SING</th><th>TINDAKAN</th></tr></thead><tbody>';
-      if(TEACHERS.length===0){
-        html += '<tr><td colspan="4">— Tiada nama guru —</td></tr>';
+      const parsed = await safeParseJSON(res);
+      if(!res.ok){ notify(`Ralat HTTP ${res.status}. ${parsed.text||''}`, 'err'); return; }
+      if(!parsed.ok){ notify('Server balas bukan JSON. Pratonton:<br><small>'+escapeHtml(parsed.text.slice(0,400))+'…</small>', 'err'); return; }
+      const json = parsed.json;
+      if(json.success){
+        notify('Data berjaya disimpan ke Google Sheets.', 'ok');
       } else {
-        TEACHERS.forEach((t,i)=>{
-          html += `<tr>
-            <td>${i+1}</td>
-            <td><input class="input-sm in-nama" data-idx="${i}" value="${t.name}" style="text-transform:uppercase" /></td>
-            <td class="col-sing"><input class="input-sm in-sing" data-idx="${i}" value="${t.sing || ''}" style="text-transform:uppercase" /></td>
-            <td><button class="btn" onclick="removeTeacher(${i})">Padam</button></td>
-          </tr>`;
-        });
+        notify('Gagal simpan: '+escapeHtml(json.error||'Tidak diketahui'), 'err');
       }
-      html += '</tbody>';
-      tbl.innerHTML = html;
-      // Bind inline edit
-      tbl.querySelectorAll('.in-nama').forEach(inp=>{
-        inp.addEventListener('change', () => {
-          const idx = parseInt(inp.dataset.idx,10);
+    }catch(e){
+      console.error(e);
+      notify('Ralat sync ke server: '+escapeHtml(String(e)), 'err');
+    }
+  }
+
+  // util kecil
+  function escapeHtml(s){ return String(s).replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m])); }
+
+  // ========== GURU ==========
+  function renderTeacherTable(){
+    const tbl = document.getElementById('tblGuru');
+    if(!tbl) return;
+    let html = '<thead><tr><th>BIL</th><th>NAMA</th><th class="col-sing">SING</th><th>TINDAKAN</th></tr></thead><tbody>';
+    if(TEACHERS.length===0){
+      html += '<tr><td colspan="4">— Tiada nama guru —</td></tr>';
+    } else {
+      TEACHERS.forEach((t,i)=>{
+        const nm = (t.name||'').toUpperCase();
+        const sg = (t.sing||t.name||'').toUpperCase();
+        html += `<tr>
+          <td>${i+1}</td>
+          <td><input class="input-sm in-nama" data-idx="${i}" value="${nm}" style="text-transform:uppercase" /></td>
+          <td class="col-sing"><input class="input-sm in-sing" data-idx="${i}" value="${sg}" style="text-transform:uppercase" /></td>
+          <td><button type="button" class="btn" onclick="removeTeacher(${i})">Padam</button></td>
+        </tr>`;
+      });
+    }
+    html += '</tbody>';
+    tbl.innerHTML = html;
+    tbl.querySelectorAll('.in-nama').forEach(inp=>{
+      inp.addEventListener('change', ()=>{
+        const idx = parseInt(inp.dataset.idx,10);
+        if(Number.isFinite(idx) && TEACHERS[idx]){
           TEACHERS[idx].name = (inp.value||'').trim().toUpperCase();
-          buildJadual();
-          paparRumusan();
-          saveState();
-        });
+          buildJadual(); paparRumusan(); saveState();
+        }
       });
-      tbl.querySelectorAll('.in-sing').forEach(inp=>{
-        inp.addEventListener('change', () => {
-          const idx = parseInt(inp.dataset.idx,10);
+    });
+    tbl.querySelectorAll('.in-sing').forEach(inp=>{
+      inp.addEventListener('change', ()=>{
+        const idx = parseInt(inp.dataset.idx,10);
+        if(Number.isFinite(idx) && TEACHERS[idx]){
           TEACHERS[idx].sing = (inp.value||'').trim().toUpperCase();
-          buildJadual();
-          paparRumusan();
-          saveState();
-        });
+          buildJadual(); paparRumusan(); saveState();
+        }
+      });
+    });
+  }
+  function addTeacher(){
+    const nInp = document.getElementById('guruNama');
+    const sInp = document.getElementById('guruSing');
+    const nama = (nInp.value||'').trim().toUpperCase();
+    const sing = (sInp.value||'').trim().toUpperCase();
+    if(!nama){ notify('Sila masukkan nama penuh guru.', 'warn'); return; }
+    const exists = TEACHERS.some(t => t.name===nama || (sing && t.sing===sing));
+    if(exists){ notify('Nama atau singkatan telah wujud.', 'warn'); return; }
+    TEACHERS.push({ name: nama, sing: sing || nama });
+    nInp.value = ''; sInp.value = '';
+    renderTeacherTable(); buildJadual(); paparRumusan(); saveState();
+  }
+  function removeTeacher(idx){
+    if(idx > -1 && idx < TEACHERS.length){
+      TEACHERS.splice(idx,1);
+      renderTeacherTable(); buildJadual(); paparRumusan(); saveState();
+    }
+  }
+  function parseGuruLine(line){
+    let s = String(line||'').trim();
+    if(!s) return null;
+    let name='', sing='';
+    if(s.includes(',')){
+      const [n, sg] = s.split(',');
+      name = (n||'').trim(); sing = (sg||'').trim();
+    } else if(s.includes(' - ')){
+      const [sg, n] = s.split(' - ');
+      name = (n||'').trim(); sing = (sg||'').trim();
+    } else {
+      name = s; sing = s;
+    }
+    name = name.toUpperCase(); sing = (sing||name).toUpperCase();
+    if(!name) return null;
+    return { name, sing };
+  }
+  function importGuruBulk(){
+    const ta = document.getElementById('bulkGuruText');
+    const text = (ta?.value||'').trim();
+    if(!text){ notify('Tiada data untuk diimport.', 'warn'); return; }
+    const lines = text.split(/\r?\n/);
+    let added = 0, skipped = 0;
+    const seen = new Set(TEACHERS.map(t=>t.name+"|"+(t.sing||'')));
+    for(const ln of lines){
+      const rec = parseGuruLine(ln);
+      if(!rec) { skipped++; continue; }
+      const key = rec.name+"|"+rec.sing;
+      if(seen.has(key)) { skipped++; continue; }
+      if(TEACHERS.some(t=>t.name===rec.name || (rec.sing && t.sing===rec.sing))){ skipped++; continue; }
+      TEACHERS.push(rec); seen.add(key); added++;
+    }
+    renderTeacherTable(); buildJadual(); paparRumusan(); saveState();
+    notify(`Import siap. Ditambah: ${added}, diabaikan: ${skipped}.`, 'ok');
+  }
+  function exportGuruCSV(){
+    const rows = [['NAMA','SING']].concat(TEACHERS.map(t=>[t.name, t.sing||'']));
+    const csv = rows.map(r=>r.map(x=>`"${String(x).replace(/"/g,'""')}"`).join(',')).join('\r\n');
+    const blob = new Blob([csv], { type:'text/csv;charset=utf-8;' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url; a.download = 'guru.csv';
+    document.body.appendChild(a); a.click(); document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  }
+
+  // ========== SUBJEK ==========
+  function renderSubjects(){
+    const tbl = document.getElementById('tblSubjects');
+    if(!tbl) return;
+    let html = '<thead><tr><th>#</th><th>NAMA SUBJEK</th><th class="col-sing">SING</th><th>TINDAKAN</th></tr></thead><tbody>';
+    if(!Array.isArray(SUBJECTS_ALL) || SUBJECTS_ALL.length===0){
+      html += '<tr><td colspan="4">— Tiada subjek —</td></tr>';
+    } else {
+      SUBJECTS_ALL.forEach((s,i)=>{
+        const nm = (s.name||'').toUpperCase();
+        const sg = (s.sing||'').toUpperCase();
+        html += `<tr>
+          <td>${i+1}</td>
+          <td><input class="in-subj-name" data-idx="${i}" value="${nm}" style="text-transform:uppercase" /></td>
+          <td class="col-sing"><input class="in-subj-sing" data-idx="${i}" value="${sg}" style="text-transform:uppercase; width:110px" /></td>
+          <td><button type="button" class="btn" onclick="removeSubject(${i})">Padam</button></td>
+        </tr>`;
       });
     }
-
-    function addTeacher(){
-      const nInp = document.getElementById('guruNama');
-      const sInp = document.getElementById('guruSing');
-      const nama = (nInp.value||'').trim().toUpperCase();
-      const sing = (sInp.value||'').trim().toUpperCase();
-      if(!nama){ alert('Sila masukkan nama penuh guru.'); return; }
-      const exists = TEACHERS.some(t => t.name===nama || (sing && t.sing===sing));
-      if(exists){ alert('Nama atau singkatan telah wujud.'); return; }
-  TEACHERS.push({ name: nama, sing: sing || nama });
-      nInp.value = '';
-      sInp.value = '';
-      renderTeacherTable();
-      buildJadual();
-      paparRumusan();
-      saveState();
+    html += '</tbody>';
+    tbl.innerHTML = html;
+    tbl.querySelectorAll('.in-subj-name').forEach(inp=>{
+      inp.addEventListener('change', ()=>{
+        const i = parseInt(inp.dataset.idx,10);
+        if(!Number.isFinite(i) || i<0 || i>=SUBJECTS_ALL.length) return;
+        SUBJECTS_ALL[i].name = (inp.value||'').trim().toUpperCase();
+        saveState(); buildJadual();
+      });
+    });
+    tbl.querySelectorAll('.in-subj-sing').forEach(inp=>{
+      inp.addEventListener('change', ()=>{
+        const i = parseInt(inp.dataset.idx,10);
+        if(!Number.isFinite(i) || i<0 || i>=SUBJECTS_ALL.length) return;
+        SUBJECTS_ALL[i].sing = (inp.value||'').trim().toUpperCase();
+        saveState(); buildJadual();
+      });
+    });
+  }
+  function addSubject(){
+    const nInp = document.getElementById('subjNama');
+    const sInp = document.getElementById('subjSing');
+    const nama = (nInp.value||'').trim().toUpperCase();
+    const sing = (sInp.value||'').trim().toUpperCase();
+    if(!nama){ notify('Sila masukkan nama subjek.', 'warn'); return; }
+    const exists = SUBJECTS_ALL.some(s => s.name===nama || s.sing===sing);
+    if(exists){ notify('Nama atau singkatan telah wujud.', 'warn'); return; }
+    SUBJECTS_ALL.push({ name: nama, sing: sing || nama });
+    nInp.value = ''; sInp.value = '';
+    renderSubjects(); buildJadual(); saveState();
+  }
+  function removeSubject(idx){
+    if(idx > -1 && idx < SUBJECTS_ALL.length){
+      SUBJECTS_ALL.splice(idx,1);
+      renderSubjects(); buildJadual(); saveState();
     }
+  }
 
-    function removeTeacher(idx){
-      if(idx > -1 && idx < TEACHERS.length){
-        TEACHERS.splice(idx,1);
-        renderTeacherTable();
-        buildJadual();
-        paparRumusan();
-        saveState();
-      }
+  // ========== JADUAL & RUMUSAN ==========
+  function ensureRow(tingkatan, kelas, defaults){
+    let rec = data.find(d => d.kelas === kelas && d.tingkatan === tingkatan);
+    if(!rec){
+      rec = { tingkatan, kelas, masa: defaults?.masa ?? 5, subjek: defaults?.subjek ?? "BI", guru: defaults?.guru ?? "", confirmed: false };
+      data.push(rec);
     }
-
-    // ========== IMPORT/EXPORT GURU ==========
-    function parseGuruLine(line){
-      let s = String(line||'').trim();
-      if(!s) return null;
-      // Sokong format: "Nama, SING" atau "SING - NAMA" atau "NAMA" sahaja
-      let name='', sing='';
-      if(s.includes(',')){
-        const [n, sg] = s.split(',');
-        name = (n||'').trim(); sing = (sg||'').trim();
-      } else if(s.includes(' - ')){
-        const [sg, n] = s.split(' - ');
-        name = (n||'').trim(); sing = (sg||'').trim();
-      } else {
-        name = s; sing = s;
-      }
-      name = name.toUpperCase(); sing = (sing||name).toUpperCase();
-      if(!name) return null;
-      return { name, sing };
-    }
-
-    function importGuruBulk(){
-      const ta = document.getElementById('bulkGuruText');
-      const text = (ta?.value||'').trim();
-      if(!text){ alert('Tiada data untuk diimport.'); return; }
-      const lines = text.split(/\r?\n/);
-      let added = 0, skipped = 0;
-      const seen = new Set(TEACHERS.map(t=>t.name+"|"+(t.sing||'')));
-      for(const ln of lines){
-        const rec = parseGuruLine(ln);
-        if(!rec) { skipped++; continue; }
-        const key = rec.name+"|"+rec.sing;
-        if(seen.has(key)) { skipped++; continue; }
-        // Elak pertembungan nama atau singkatan yang sama
-        if(TEACHERS.some(t=>t.name===rec.name || (rec.sing && t.sing===rec.sing))){ skipped++; continue; }
-        TEACHERS.push(rec); seen.add(key); added++;
-      }
-      renderTeacherTable();
-      buildJadual();
-      paparRumusan();
-      saveState();
-      alert(`Import siap. Ditambah: ${added}, diabaikan: ${skipped}.`);
-    }
-
-    function exportGuruCSV(){
-      const rows = [['NAMA','SING']].concat(TEACHERS.map(t=>[t.name, t.sing||'']));
-      const csv = rows.map(r=>r.map(x=>`"${String(x).replace(/"/g,'""')}"`).join(',')).join('\r\n');
-      const blob = new Blob([csv], { type:'text/csv;charset=utf-8;' });
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url; a.download = 'guru.csv';
-      document.body.appendChild(a); a.click(); document.body.removeChild(a);
-      URL.revokeObjectURL(url);
-    }
-
-    function addSubject(){
-      const nInp = document.getElementById('subjNama');
-      const sInp = document.getElementById('subjSing');
-      const nama = (nInp.value||'').trim().toUpperCase();
-      const sing = (sInp.value||'').trim().toUpperCase();
-      if(!nama){ alert('Sila masukkan nama subjek.'); return; }
-      const exists = SUBJECTS_ALL.some(s => s.name===nama || s.sing===sing);
-      if(exists){ alert('Nama atau singkatan telah wujud.'); return; }
-      SUBJECTS_ALL.push({ name: nama, sing: sing || nama });
-      nInp.value = '';
-      sInp.value = '';
-      renderSubjects();
-      buildJadual();
-      saveState();
-    }
-
-    function removeSubject(idx){
-      if(idx > -1 && idx < SUBJECTS_ALL.length){
-        SUBJECTS_ALL.splice(idx,1);
-        renderSubjects();
-        buildJadual();
-        saveState();
-      }
-    }
-
-    // ========== GOOGLE SHEETS SYNC ==========
-    function setSyncStatus(text, isError=false){
-      const el = document.getElementById('syncStatus');
-      if(el){ el.textContent = text || ''; el.style.color = isError ? '#b91c1c' : '#555'; }
-    }
-
-    // Helper: fetch dengan timeout untuk lebih robust
-    async function fetchWithTimeout(resource, options={}, timeoutMs=15000){
-      const controller = new AbortController();
-      const id = setTimeout(()=>controller.abort(), timeoutMs);
-      try{
-        const res = await fetch(resource, { ...options, signal: controller.signal });
-        return res;
-      } finally {
-        clearTimeout(id);
-      }
-    }
-
-    async function syncToSheets(silent=false){
-      try{
-        const urlEl = document.getElementById('gasUrl');
-        const secEl = document.getElementById('gasSecret');
-        const url = (urlEl?.value || localStorage.getItem(LS_GAS_URL_KEY) || '').trim();
-        const secret = (secEl?.value || localStorage.getItem(LS_GAS_SECRET_KEY) || '').trim();
-        if(!url){ if(!silent) alert('Sila masukkan Web App URL.'); return; }
-
-        // Bentuk payload
-        const teachers = TEACHERS.map(t=>({ name: (t.name||'').toUpperCase(), sing: (t.sing||'').toUpperCase() }));
-        const subjects = (Array.isArray(SUBJECTS_ALL)?SUBJECTS_ALL:[]).map(s=>({ name:(s.name||'').toUpperCase(), sing:(s.sing||'').toUpperCase() }));
-        const jadual = (Array.isArray(data)?data:[]).map(r=>({
-          tingkatan: r.tingkatan,
-          kelas: r.kelas,
-          masa: Number(r.masa)||0,
-          subjek: r.subjek,
-          guru: r.guru,
-          confirmed: !!r.confirmed
-        }));
-        const body = { action:'write', secret, teachers, subjects, jadual };
-
-        setSyncStatus('Menghantar...');
-        const res = await fetchWithTimeout(url, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(body)
-        }, 20000);
-        const text = await res.text();
-        let ok = res.ok;
-        try { const json = JSON.parse(text); ok = ok && (json.success !== false); } catch(_) {}
-        if(!ok){
-          setSyncStatus('Gagal hantar.', true);
-          if(!silent) alert('Gagal hantar ke Google Sheets.');
-          return;
+    if(typeof rec.confirmed !== 'boolean') rec.confirmed = false;
+    return rec;
+  }
+  function buildJadual(){
+    const tbl = document.getElementById("jadualSubjekUtama");
+    if(!tbl) return;
+    let html = `<thead>
+      <tr><th colspan="5" class="header-utama">SUBJEK UTAMA</th></tr>
+      <tr class="subhead-utama">
+        <th>CLASS</th><th>BIL WAK</th><th>NAMA SUBJEK</th><th>NAMA GURU</th><th>TINDAKAN</th>
+      </tr>
+    </thead><tbody>`;
+    TINGKATAN_ORDER.forEach(ting => {
+      html += `<tr class="tingkatan-row"><td colspan="5">TINGKATAN ${ting}</td></tr>`;
+      const classesForTing = (ting === 'PERALIHAN') ? PERALIHAN_CODES : CLASS_CODES;
+      classesForTing.forEach(code => {
+        const kelas = code;
+        const rec = ensureRow(ting, kelas, { masa:5, subjek:"BI", guru:"" });
+        const masaOpts = Array.from({length:10}, (_,i)=>i+1).map(v => `<option value="${v}" ${v===rec.masa ? "selected" : ""}>${v}</option>`).join("");
+        let foundSub = false;
+        let subjekOpts = `<option value=""></option>` + SUBJECTS_ALL.map(s => {
+          const sel = (s.sing === rec.subjek);
+          if(sel) foundSub = true;
+          return `<option value="${s.sing}" ${sel ? 'selected' : ''}>${s.name}</option>`;
+        }).join("");
+        if(rec.subjek && !foundSub){
+          subjekOpts = `<option value="${rec.subjek}" selected>(${rec.subjek})</option>` + subjekOpts;
         }
-        setSyncStatus('Selesai hantar.');
-        if(!silent) alert('Berjaya dihantar ke Google Sheets.');
-      } catch(err){
-        console.error(err);
-        setSyncStatus('Ralat semasa hantar.', true);
-        if(!silent) alert('Ralat semasa menghantar.');
-      }
-    }
-
-    async function refreshFromSheets(silent=false){
-      try{
-        const urlEl = document.getElementById('gasUrl');
-        const urlBase = (urlEl?.value || localStorage.getItem(LS_GAS_URL_KEY) || '').trim();
-        if(!urlBase){ alert('Sila masukkan Web App URL.'); return; }
-        setSyncStatus('Memuat data...');
-
-  const opts = { method:'GET', mode:'cors', cache:'no-store' };
-        const candidates = [urlBase + (urlBase.includes('?') ? '&' : '?') + 'action=read', urlBase];
-        let json = null; let lastErr = '';
-        for(const url of candidates){
-          try{
-            const res = await fetchWithTimeout(url, opts, 20000);
-            if(!res.ok){ lastErr = `HTTP ${res.status}`; continue; }
-            const text = await res.text();
-            try{
-              const j = JSON.parse(text);
-              // Pastikan struktur munasabah
-              if(j && (Array.isArray(j.teachers) || Array.isArray(j.guru))){
-                json = j; break;
-              } else {
-                lastErr = 'Respons tiada senarai guru/subjek';
-              }
-            } catch(parseErr){
-              lastErr = 'Gagal parse JSON';
-            }
-          }catch(fetchErr){
-            lastErr = String(fetchErr);
-          }
+        const namesSet = new Set(TEACHERS.map(x=>x.name));
+        let guruOpts = `<option value=""></option>`;
+        guruOpts += TEACHERS.map(t => {
+          const val = t.name;
+          const label = t.sing || t.name;
+          const sel = (val === rec.guru) ? 'selected' : '';
+          return `<option value="${val}" ${sel}>${label}</option>`;
+        }).join("");
+        if(rec.guru && !namesSet.has(rec.guru)){
+          guruOpts = `<option value="${rec.guru}" selected>${rec.guru}</option>` + guruOpts;
         }
-        if(!json){
-          setSyncStatus('Gagal memuat.', true);
-          if(!silent) alert('Gagal memuat dari Google Sheets: ' + lastErr);
-          return;
-        }
+        const disabled = rec.confirmed ? 'disabled' : '';
+        html += `<tr>
+          <td>${kelas}</td>
+          <td><select class="inp-masa" data-ting="${ting}" data-kelas="${kelas}">${masaOpts}</select></td>
+          <td><select class="inp-subjek" data-ting="${ting}" data-kelas="${kelas}">${subjekOpts}</select></td>
+          <td><select class="inp-guru" data-ting="${ting}" data-kelas="${kelas}">${guruOpts}</select></td>
+          <td><button type="button" class="btn btn-teruskan" data-ting="${ting}" data-kelas="${kelas}" ${disabled}>Teruskan</button></td>
+        </tr>`;
+      });
+    });
+    html += `</tbody>`;
+    tbl.innerHTML = html;
+    tbl.querySelectorAll('.inp-masa').forEach(sel => {
+      sel.addEventListener('change', () => {
+        const rec = ensureRow(sel.dataset.ting, sel.dataset.kelas);
+        rec.masa = parseInt(sel.value,10) || 0; rec.confirmed = false;
+        paparRumusan(); saveState();
+      });
+    });
+    tbl.querySelectorAll('.inp-subjek').forEach(sel => {
+      sel.addEventListener('change', () => {
+        const rec = ensureRow(sel.dataset.ting, sel.dataset.kelas);
+        rec.subjek = (sel.value||'').toUpperCase(); rec.confirmed = false;
+        paparRumusan(); saveState();
+      });
+    });
+    tbl.querySelectorAll('.inp-guru').forEach(sel => {
+      sel.addEventListener('change', () => {
+        const rec = ensureRow(sel.dataset.ting, sel.dataset.kelas);
+        rec.guru = (sel.value||'').toUpperCase(); rec.confirmed = false;
+        paparRumusan(); saveState();
+      });
+    });
+    tbl.querySelectorAll('.btn-teruskan').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const rec = ensureRow(btn.dataset.ting, btn.dataset.kelas);
+        if(rec.confirmed) { notify('Data telah diisi.', 'warn'); return; }
+        if(!rec.subjek || !rec.masa || !rec.kelas || !rec.tingkatan){ notify('Lengkapkan Subjek, Bil Waktu, Kelas, Tingkatan.', 'warn'); return; }
+        if(!rec.guru){ notify('Sila pilih Nama Guru.', 'warn'); return; }
+        const isDup = data.some(d => d !== rec && d.confirmed && d.tingkatan===rec.tingkatan && d.kelas===rec.kelas && d.subjek===rec.subjek && d.masa===rec.masa);
+        if(isDup){ notify('Peringatan: kombinasi ini sudah diisi.', 'warn'); return; }
+        rec.confirmed = true; saveState(); buildJadual(); paparRumusan(); notify('Disahkan.', 'ok');
+      });
+    });
+  }
+  function paparRumusan(){
+    let group = {};
+    data.forEach(item => {
+      if(!item.guru || !item.confirmed) return;
+      if(!group[item.guru]) group[item.guru] = { kelasSubjek: [], total: 0 };
+      const tingLabel = (item.tingkatan === 'PERALIHAN') ? 'PERALIHAN' : `T${item.tingkatan}`;
+      group[item.guru].kelasSubjek.push(`${tingLabel} ${item.kelas} (${item.subjek})`);
+      group[item.guru].total += Number(item.masa)||0;
+    });
+    let html = '<table><thead><tr><th>Nama Guru</th><th>Subjek & Kelas</th><th>Jumlah Masa</th></tr></thead><tbody>';
+    const keys = Object.keys(group);
+    if(keys.length===0) html += '<tr><td colspan="3">— Tiada data disahkan —</td></tr>';
+    else keys.forEach(guru=>{
+      const t = TEACHERS.find(x => x.name === guru);
+      const label = t ? (t.sing || t.name) : guru;
+      html += `<tr><td>${label}</td><td>${group[guru].kelasSubjek.join(', ')}</td><td>${group[guru].total}</td></tr>`;
+    });
+    html += '</tbody></table>';
+    document.getElementById('output').innerHTML = html;
+  }
 
-        const tArr = Array.isArray(json.teachers) ? json.teachers : (Array.isArray(json.guru)? json.guru : []);
-        const sArr = Array.isArray(json.subjects) ? json.subjects : (Array.isArray(json.subjek)? json.subjek : []);
-        const jArr = Array.isArray(json.jadual) ? json.jadual : [];
-
-        // Ganti TEACHERS
-        TEACHERS.length = 0;
-        tArr.forEach(x=>{
-          if(!x) return;
-          const name = String(x.name||x.NAMA||'').toUpperCase();
-          if(!name) return;
-          const sing = String(x.sing??x.SINGKATAN??x.SING??x.name??'').toUpperCase();
-          TEACHERS.push({ name, sing });
-        });
-
-        // Ganti SUBJECTS_ALL
-        SUBJECTS_ALL = (Array.isArray(sArr)?sArr:[]).map(s=>({
-          name: String(s.name||s.NAMA||'').toUpperCase(),
-          sing: String(s.sing??s.SING??s.SINGKATAN??s.name??'').toUpperCase()
-        })).filter(s=>s.name);
-
-        // Ganti data jadual
-        data = (Array.isArray(jArr)?jArr:[]).map(r=>({
-          tingkatan: String(r?.tingkatan ?? r?.TINGKATAN ?? r?.ting ?? ''),
-          kelas: String(r?.kelas ?? r?.KELAS ?? '').toUpperCase(),
-          masa: Number(r?.masa ?? r?.MASA ?? 0),
-          subjek: String(r?.subjek ?? r?.SUBJEK ?? '').toUpperCase(),
-          guru: String(r?.guru ?? r?.GURU ?? '').toUpperCase(),
-          confirmed: !!(r?.confirmed ?? r?.SAH ?? r?.CONFIRMED)
-        }));
-
-        // Segar semula UI dan simpan
-        renderTeacherTable();
-        renderSubjects(); // Pastikan senarai subjek juga dikemaskini
-        buildJadual();
-        paparRumusan();
-        saveState();
-        if(!silent) {
-          setSyncStatus('Selesai segar semula.');
-          alert('Data dimuat dari Google Sheets.');
-        }
-      } catch(err){
-        console.error(err);
-        setSyncStatus('Ralat semasa memuat.', true);
-        if(!silent) alert('Ralat semasa memuat data.');
-        throw err; // Lontar semula ralat untuk ditangkap oleh initializeApp
-      }
+  // ========== Boot ==========
+  async function initializeApp(){
+    loadState();
+    if(!Array.isArray(SUBJECTS_ALL) || SUBJECTS_ALL.length === 0){
+      SUBJECTS_ALL = SUBJECTS_DEFAULT.map(n=>({ name:n.toUpperCase(), sing:n.toUpperCase() }));
     }
-
-    function initGasConfigUI(){
-      const urlEl = document.getElementById('gasUrl');
-      const secEl = document.getElementById('gasSecret');
-      const autoEl = document.getElementById('autoRefreshOnLoad');
-      if(urlEl){
-        const savedUrl = localStorage.getItem(LS_GAS_URL_KEY) || '';
-        if(!urlEl.value) urlEl.value = savedUrl;
-        // Persist setiap perubahan URL
-        localStorage.setItem(LS_GAS_URL_KEY, (urlEl.value||'').trim());
-        urlEl.addEventListener('change', ()=>{
-          localStorage.setItem(LS_GAS_URL_KEY, (urlEl.value||'').trim());
-        });
-      }
-      if(secEl){
-        const savedSec = localStorage.getItem(LS_GAS_SECRET_KEY) || '';
-        if(!secEl.value) secEl.value = savedSec;
-        secEl.addEventListener('change', ()=>{
-          localStorage.setItem(LS_GAS_SECRET_KEY, (secEl.value||'').trim());
-        });
-      }
-      if(autoEl){
-        const saved = localStorage.getItem(LS_AUTO_REFRESH_KEY);
-        autoEl.checked = saved === '1';
-        autoEl.addEventListener('change', ()=>{
-          localStorage.setItem(LS_AUTO_REFRESH_KEY, autoEl.checked ? '1' : '0');
-        });
-      }
-      const btnPush = document.getElementById('btnPushSheets');
-      if(btnPush){ btnPush.addEventListener('click', ()=> syncToSheets(false)); }
-      const btnPull = document.getElementById('btnPullSheets');
-      if(btnPull){ btnPull.addEventListener('click', ()=> refreshFromSheets(false)); }
-      const btnTest = document.getElementById('btnTestConn');
-      if(btnTest){ btnTest.addEventListener('click', ()=> testConnection()); }
-      const btnReset = document.getElementById('btnResetLocal');
-      if(btnReset){ btnReset.addEventListener('click', ()=> resetLocalData()); }
-    }
-
-    function resetLocalData(){
-      if(!confirm('Padam semua data tempatan (guru, subjek, jadual)? Tindakan ini tidak boleh diundur.')) return;
-      try{
-        localStorage.removeItem(LS_TEACHERS_KEY);
-        localStorage.removeItem(LS_DATA_KEY);
-        localStorage.removeItem(LS_SUBJECTS_KEY);
-      }catch(e){}
-      TEACHERS.length = 0;
-      SUBJECTS_ALL.length = 0;
-      data.length = 0;
-      renderTeacherTable();
-      renderSubjects();
-      buildJadual();
-      paparRumusan();
-      setSyncStatus('Data tempatan telah direset.');
-    }
-
-    async function testConnection(){
-      try{
-        const url = (document.getElementById('gasUrl')?.value||'').trim();
-        if(!url){ alert('Sila masukkan Web App URL.'); return; }
-        setSyncStatus('Menguji sambungan...');
-  const opts = { method:'GET', mode:'cors', cache:'no-store' };
-        const candidates = [url + (url.includes('?') ? '&' : '?') + 'action=read', url];
-        let json=null, lastErr='';
-        for(const u of candidates){
-          try{
-            const res = await fetchWithTimeout(u, opts, 15000);
-            if(!res.ok){ lastErr = `HTTP ${res.status}`; continue; }
-            const text = await res.text();
-            try{ json = JSON.parse(text); }catch{ lastErr='Gagal parse JSON'; continue; }
-            break;
-          }catch(e){ lastErr = String(e); }
-        }
-        if(!json){ setSyncStatus('Gagal uji: '+lastErr, true); alert('Gagal uji sambungan: '+lastErr); return; }
-        const guru = Array.isArray(json.teachers) ? json.teachers : (Array.isArray(json.guru)? json.guru : []);
-        const subj = Array.isArray(json.subjects) ? json.subjects : (Array.isArray(json.subjek)? json.subjek : []);
-        const jad = Array.isArray(json.jadual) ? json.jadual : [];
-        setSyncStatus(`OK. Guru: ${guru.length}, Subjek: ${subj.length}, Jadual: ${jad.length}`);
-        alert(`Sambungan OK\nGuru: ${guru.length}\nSubjek: ${subj.length}\nJadual: ${jad.length}`);
-      }catch(err){
-        console.error(err);
-        setSyncStatus('Ralat uji sambungan.', true);
-        alert('Ralat uji sambungan.');
-      }
-    }
-
-    // Pastikan paparRumusan wujud (fallback jika tertindih)
-    if(typeof paparRumusan !== 'function'){
-      function paparRumusan(){
-        let group = {};
-        data.forEach(item => {
-          if(!item.guru || !item.confirmed) return;
-          if(!group[item.guru]) group[item.guru] = { kelasSubjek: [], total: 0 };
-          const tingLabel = (item.tingkatan === 'PERALIHAN') ? 'PERALIHAN' : `T${item.tingkatan}`;
-          group[item.guru].kelasSubjek.push(`${tingLabel} ${item.kelas} (${item.subjek})`);
-          group[item.guru].total += Number(item.masa)||0;
-        });
-        let html = '<table><tr><th>Nama Guru</th><th>Subjek & Kelas</th><th>Jumlah Masa</th></tr>';
-        for (const guru in group){
-          const t = TEACHERS.find(x => x.name === guru);
-          const guruLabel = t ? (t.sing || t.name) : guru;
-          html += `<tr><td>${guruLabel}</td><td>${group[guru].kelasSubjek.join(', ')}</td><td>${group[guru].total}</td></tr>`;
-        }
-        html += '</table>';
-        const out = document.getElementById('output');
-        if(out) out.innerHTML = html;
-      }
-    }
-
-    async function initializeApp(){
-      // 1) Muat dari cache dahulu
-      try{ loadState(); }catch(e){}
-      // Jika tiada subjek tersimpan, gunakan lalai minimum supaya dropdown tidak kosong
-      if(!Array.isArray(SUBJECTS_ALL) || SUBJECTS_ALL.length === 0){
-        SUBJECTS_ALL = (Array.isArray(SUBJECTS) ? SUBJECTS : ["BI","BM","MATEMATIK","SAINS","SEJARAH"]).map(n=>({ name: String(n).toUpperCase(), sing: String(n).toUpperCase() }));
-      }
-      renderTeacherTable();
-      renderSubjects();
-      buildJadual();
-      paparRumusan();
-      initGasConfigUI();
-      // 2) Sentiasa cuba tarik terkini dari Sheets pada permulaan jika URL ada
-      const url = (document.getElementById('gasUrl')?.value||'').trim();
-      const auto = (localStorage.getItem(LS_AUTO_REFRESH_KEY) === '1');
-      if(url){
-        try{
-          await refreshFromSheets(true);
-          setSyncStatus('Data terkini dimuat dari Sheets.', false);
-        }catch(e){
-          setSyncStatus('Gagal muat dari Sheets. Guna data lokal.', true);
-        }
-      }
-    }
-
-    // Mula aplikasi
-    initializeApp();
-    // Tetapkan tajuk header dari document.title (jika diubah pihak pengguna)
+    renderTeacherTable(); renderSubjects(); buildJadual(); paparRumusan();
+    await fetchFromServer(); // cuba muat server (jika API_URL diset)
     try{
       const h = document.getElementById('mainHeaderTitle');
       if(h) h.textContent = document.title || h.textContent;
     }catch(e){}
-  </script>
+  }
+  initializeApp();
+
+  // perlindungan: jika ada <a href=".../exec"> tak sengaja, block
+  document.addEventListener('click', (e)=>{
+    const a = e.target.closest('a[href]');
+    if(!a) return;
+    if(/script\.google\.com\/.*\/exec/.test(a.href)){
+      e.preventDefault();
+      notify('Pautan Web App GAS disekat. Guna butang "Refresh" atau "Sync" untuk akses API.', 'warn');
+    }
+  });
+</script>
 </body>
 </html>
